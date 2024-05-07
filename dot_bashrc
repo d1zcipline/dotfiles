@@ -13,15 +13,27 @@ export FZF_ALT_C_COMMAND="fd --type=d --hidden --strip-cwd-prefix --exclude .git
 # - The first argument to the function ($1) is the base path to start traversal
 # - See the source code (completion.{bash,zsh}) for the details.
 _fzf_compgen_path() {
-  fd --hidden --exclude .git . "$1"
+	fd --hidden --exclude .git . "$1"
 }
 
 # Use fd to generate the list for directory completion
 _fzf_compgen_dir() {
-  fd --type=d --hidden --exclude .git . "$1"
+	fd --type=d --hidden --exclude .git . "$1"
 }
 
-# Starship prompt
+# --- nvm ---
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"                   # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
+
+# --- tmux start up ---
+
+if command -v tmux &>/dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
+	tmux attach -t main || exec tmux new-session -A -s main && exit
+fi
+
+# --- Starship prompt ---
 
 eval "$(starship init bash)"
 
@@ -29,6 +41,7 @@ eval "$(starship init bash)"
 
 # cd
 alias ..="cd .."
+alias usession="cd ~/usession/1_grade/2_semester/"
 
 # ls
 alias ls="ls --color=auto"
@@ -37,4 +50,3 @@ alias la="ls -la"
 
 # git
 alias gs="git status"
-
