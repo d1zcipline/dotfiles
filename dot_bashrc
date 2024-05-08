@@ -41,7 +41,7 @@ eval "$(starship init bash)"
 
 # cd
 alias ..="cd .."
-alias usession="cd ~/usession/1_grade/2_semester/"
+alias uni="cd ~/usession/1_grade/2_semester/"
 
 # ls
 alias ls="ls --color=auto"

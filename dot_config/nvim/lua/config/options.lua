@@ -16,4 +16,8 @@ opt.foldenable = false
 opt.scrolloff = 8
 opt.linebreak = true
 
+-- True color terminal
+
+opt.termguicolors = true
+
 vim.g.mkdp_browser = "/Applications/Firefox Developer Edition.app/Contents/MacOS/Firefox"
