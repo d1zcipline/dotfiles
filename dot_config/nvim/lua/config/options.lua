@@ -21,3 +21,7 @@ opt.linebreak = true
 opt.termguicolors = true
 
 vim.g.mkdp_browser = "/Applications/Firefox Developer Edition.app/Contents/MacOS/Firefox"
+
+--- warnings ---
+
+vim.g.deprecation_warnings = true

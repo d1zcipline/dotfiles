@@ -1,4 +1,4 @@
-# thefuck alias
+# CLI tools
 eval $(thefuck --alias)
 
 eval "$(fzf --bash)"
@@ -50,3 +50,6 @@ alias la="ls -la"
 
 # git
 alias gs="git status"
+
+# Second brain
+alias sb="nvim ~/obsidian/Knowledge\ Vault"
