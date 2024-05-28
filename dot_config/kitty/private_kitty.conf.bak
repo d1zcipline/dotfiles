@@ -1,0 +1,120 @@
+# --- fonts ---
+
+font_size 24
+
+font_family      Mononoki Nerd Font
+bold_font        auto
+italic_font      auto
+bold_italic_font auto
+
+# Ligatures
+disable_ligatures always
+
+# --- OS tweaks ---
+
+macos_quit_when_last_window_closed yes
+
+# --- Mouse ---
+
+# Urls
+open_url_with default
+detect_urls yes
+
+# --- Window layout ---
+
+hide_window_decorations yes
+confirm_os_window_close 0
+enabled_layouts splits
+
+# --- Tab bar ---
+
+tab_bar_edge top
+tab_bar_style separator
+tab_separator " "
+tab_title_template "{index}"
+
+active_tab_foreground   #eee
+active_tab_background   #242424
+active_tab_font_style   bold
+inactive_tab_foreground #777
+inactive_tab_background #242424
+inactive_tab_font_style normal
+
+# --- Colorscheme ---
+
+# foreground #d1d5da
+# background #242424
+background_opacity 0.9
+background_blur 16
+
+# colors
+# color0 #586069
+# color8 #959da5
+#
+# color1 #ea4a5a
+# color9 #f97583
+#
+# color2 #34d058
+# color10 #85e89d
+#
+# color3 #ffea7f
+# color11 #ffea7f
+#
+# color4 #2188ff
+# color12 #79b8ff
+#
+# color5 #b392f0
+# color13 #b392f0
+#
+# color6 #39c5cf
+# color14 #56d4dd
+#
+# color7 #d1d5da
+# color15 #fafbfc
+#
+# # other colors
+# color16 #d18616
+# color17 #f97583
+#
+# --- Keybindings ---
+
+map cmd+1 goto_tab 1
+map cmd+2 goto_tab 2
+map cmd+3 goto_tab 3
+map cmd+4 goto_tab 4
+map cmd+5 goto_tab 6
+
+map kitty_mod+enter
+
+# layout Keybindings
+map cmd+shift+\ launch --location=vsplit
+map cmd+shift+- launch --location=hsplit
+map cmd+shift+enter launch --location=split
+
+map cmd+shift+r layout_action rotate
+
+map shift+up move_window up
+map shift+left move_window left
+map shift+right move_window right
+map shift+down move_window down
+
+map cmd+shift+up layout_action move_to_screen_edge top
+map cmd+shift+left layout_action move_to_screen_edge left
+map cmd+shift+right layout_action move_to_screen_edge right
+map cmd+shift+down layout_action move_to_screen_edge bottom
+
+# focus window
+map cmd+option+control+shift+h neighboring_window left
+map cmd+option+control+shift+l neighboring_window right
+map cmd+option+control+shift+k neighboring_window up
+map cmd+option+control+shift+j neighboring_window down
+
+# resize window
+map ctrl+left resize_window wider
+map ctrl+right resize_window narrower
+map ctrl+up resize_window taller
+map ctrl+down resize_window shorter
+# reset all windows in the tab to default sizes
+map ctrl+enter resize_window reset
+
+
