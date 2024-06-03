@@ -76,6 +76,17 @@ shift + alt - 7 : yabai -m window --space 7 --focus
 shift + alt - 8 : yabai -m window --space 8 --focus
 shift + alt - 9 : yabai -m window --space 9 --focus
 
+# move window
+hyper - 1 : yabai -m window --space 1
+hyper - 2 : yabai -m window --space 2
+hyper - 3 : yabai -m window --space 3
+hyper - 4 : yabai -m window --space 4
+hyper - 5 : yabai -m window --space 5
+hyper - 6 : yabai -m window --space 6
+hyper - 7 : yabai -m window --space 7
+hyper - 8 : yabai -m window --space 8
+hyper - 9 : yabai -m window --space 9
+
 # resize window
 shift + alt - right : yabai -m window --resize right:20:0
 shift + alt - left : yabai -m window --resize left:-20:0
