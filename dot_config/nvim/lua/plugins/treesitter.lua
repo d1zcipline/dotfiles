@@ -6,6 +6,7 @@ return {
       "vimdoc",
       "html",
       "css",
+      "scss",
       "json",
       "lua",
       -- "markdown",
@@ -19,6 +20,10 @@ return {
       "bicep",
       "terraform",
       "c_sharp",
+      "javascript",
+      "typescript",
+      "sql",
+      "http",
     },
   },
 }
