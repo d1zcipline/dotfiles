@@ -1,6 +1,6 @@
 # focus display
-ctrl - h : yabai -m display --focus prev || yabai -m display --focus last
-ctrl - l : yabai -m display --focus next || yabai -m display --focus first
+cmd - h : yabai -m display --focus prev || yabai -m display --focus last
+cmd - l : yabai -m display --focus next || yabai -m display --focus first
 
 # focus window
 alt - h : yabai -m window --focus west
@@ -19,8 +19,8 @@ alt - 7 : yabai -m space --focus 7
 alt - 8 : yabai -m space --focus 8
 alt - 9 : yabai -m space --focus 9
 
-ctrl - j : yabai -m space --focus prev || yabai -m space --focus last
-ctrl - k : yabai -m space --focus next || yabai -m space --focus first
+cmd - j : yabai -m space --focus prev || yabai -m space --focus last
+cmd - k : yabai -m space --focus next || yabai -m space --focus first
 
 # swap managed window
 shift + alt - h : yabai -m window --swap west
