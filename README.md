@@ -12,7 +12,8 @@ The software that I use:
 - [Starship](https://starship.rs/)
 - [yabai](https://github.com/koekeishiya/yabai) + [skhd](https://github.com/koekeishiya/skhd)
 - Neovim ([LazyVim](https://www.lazyvim.org/) based setup) + [kitty](https://sw.kovidgoyal.net/kitty/) terminal
-- alacitty + tmux (deprecated cuz of kitty)
+- [yazi](https://yazi-rs.github.io/)
+- Alacitty + tmux (outdated cuz of kitty)
 
 ## Installation
 
