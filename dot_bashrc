@@ -1,5 +1,5 @@
 # CLI tools
-eval $(thefuck --alias)
+eval "$(thefuck --alias)"
 
 eval "$(fzf --bash)"
 
@@ -32,6 +32,17 @@ export NVM_DIR="$HOME/.nvm"
 # if command -v tmux &>/dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
 # 	tmux attach -t main || exec tmux new-session -A -s main && exit
 # fi
+
+# --- yazi ---
+
+function yy() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
+	yazi "$@" --cwd-file="$tmp"
+	if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+		cd -- "$cwd"
+	fi
+	rm -f -- "$tmp"
+}
 
 # --- Starship prompt ---
 
