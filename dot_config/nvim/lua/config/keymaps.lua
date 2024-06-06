@@ -5,6 +5,7 @@ local keymap = vim.keymap
 local opts = { noremap = true, silent = true }
 
 keymap.set("i", "jk", "<ESC>", { desc = "Exit insert mode with jk" })
+keymap.set("n", "<Esc>", ":nohlsearch<Return>")
 
 -- Select all
 keymap.set("n", "<C-a>", "gg<S-v>G")
