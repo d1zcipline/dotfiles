@@ -29,8 +29,8 @@ yabai -m config mouse_follows_focus off
 yabai -m config window_topmost off
 
 yabai -m rule --add app="^System Preferences$" manage=off
-yabai -m rule --add app="^Finder$" manage=off sticky=on
-yabai -m rule --add app="^App Cleaner & Uninstaller$" manage=off sticky=on
+yabai -m rule --add app="^Finder$" manage=off
+yabai -m rule --add app="^AppCleaner$" manage=off sticky=on
 yabai -m rule --add app="^Raycast$" manage=off sticky=on
 yabai -m rule --add app="^SF Symbols$" manage=off
 
