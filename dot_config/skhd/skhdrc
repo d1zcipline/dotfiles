@@ -1,6 +1,6 @@
 # focus display
-cmd - h : yabai -m display --focus prev || yabai -m display --focus last
-cmd - l : yabai -m display --focus next || yabai -m display --focus first
+shift + alt - h : yabai -m display --focus prev || yabai -m display --focus last
+shift + alt - l : yabai -m display --focus next || yabai -m display --focus first
 
 # focus window
 alt - h : yabai -m window --focus west
@@ -19,14 +19,14 @@ alt - 7 : yabai -m space --focus 7
 alt - 8 : yabai -m space --focus 8
 alt - 9 : yabai -m space --focus 9
 
-cmd - j : yabai -m space --focus prev || yabai -m space --focus last
-cmd - k : yabai -m space --focus next || yabai -m space --focus first
+shift + alt - j : yabai -m space --focus prev || yabai -m space --focus last
+shift + alt - k : yabai -m space --focus next || yabai -m space --focus first
 
 # swap managed window
-shift + alt - h : yabai -m window --swap west
-shift + alt - j : yabai -m window --swap south
-shift + alt - k : yabai -m window --swap north
-shift + alt - l : yabai -m window --swap east
+# shift + alt - h : yabai -m window --swap west
+# shift + alt - j : yabai -m window --swap south
+# shift + alt - k : yabai -m window --swap north
+# shift + alt - l : yabai -m window --swap east
 
 # move managed window
 # shift + alt + ctrl - h : yabai -m window --warp west
@@ -63,7 +63,7 @@ alt - t : yabai -m window --toggle float;\
 alt - e : yabai -m window --toggle split
 
 # balance size of windows
-shift + alt - 0 : yabai -m space --balance
+alt - 0 : yabai -m space --balance
 
 # move window and focus desktop
 shift + alt - 1 : yabai -m window --space 1 --focus
@@ -88,10 +88,10 @@ hyper - 8 : yabai -m window --space 8
 hyper - 9 : yabai -m window --space 9
 
 # resize window
-shift + alt - right : yabai -m window --resize right:20:0
-shift + alt - left : yabai -m window --resize left:-20:0
-shift + alt - up : yabai -m window --resize top:0:-20
-shift + alt - down : yabai -m window --resize bottom:0:20
+alt - right : yabai -m window --resize right:20:0
+alt - left : yabai -m window --resize left:-20:0
+alt - up : yabai -m window --resize top:0:-20
+alt - down : yabai -m window --resize bottom:0:20
 
 # create/destroy space
 shift + alt - return : yabai -m space --create && \
