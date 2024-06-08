@@ -10,7 +10,7 @@ vim.opt.fileencoding = "utf-8"
 vim.opt.number = true
 
 vim.opt.title = true
--- vim.opt.autoindent = true
+vim.opt.autoindent = true
 vim.opt.smartindent = true
 vim.opt.hlsearch = true
 vim.opt.backup = false
@@ -29,10 +29,11 @@ vim.opt.wrap = false
 vim.opt.backspace = { "start", "eol", "indent" }
 vim.opt.path:append({ "**" })
 vim.opt.wildignore:append({ "*/node_modules/*" })
+vim.opt.clipboard:append("unnamedplus")
 vim.opt.splitbelow = true
 vim.opt.splitright = true
 vim.opt.splitkeep = "cursor"
-vim.opt.mouse = ""
+-- vim.opt.mouse = ""
 
 -- Add asterisks in block comments
 vim.opt.formatoptions:append({ "r" })
