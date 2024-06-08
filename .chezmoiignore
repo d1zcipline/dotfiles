@@ -1,3 +1,5 @@
-lazy-lock.json
+README.md
+
+.config/nvim/lazy-lock.json
 .vscode
 .DS_Store
