@@ -15,6 +15,8 @@ The software that I use:
 - [kitty](https://sw.kovidgoyal.net/kitty/)
 - [yazi](https://yazi-rs.github.io/)
 
+You can see a list of apps that I use [here](/apps.md)
+
 ## Installation
 
 If the device does not have chezmoi installed, you can run this one line command:
