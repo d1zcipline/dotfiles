@@ -1,3 +1,6 @@
+#
+shift + alt - r : yabai --restart-service
+
 # focus display
 shift + alt - h : yabai -m display --focus prev || yabai -m display --focus last
 shift + alt - l : yabai -m display --focus next || yabai -m display --focus first

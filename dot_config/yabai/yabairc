@@ -16,6 +16,7 @@ yabai -m config window_gap 5
 
 yabai -m config auto_balance off
 yabai -m config split_ratio 0.5
+yabai -m config window_topmost off
 
 # mouse settings
 yabai -m config mouse_modifier alt
@@ -26,11 +27,11 @@ yabai -m config mouse_drop_action swap
 yabai -m config focus_follows_mouse off
 yabai -m config mouse_follows_focus off
 
-yabai -m config window_topmost off
-
-yabai -m rule --add app="^System Preferences$" manage=off
+yabai -m rule --add app="^System Settings$" manage=off
 yabai -m rule --add app="^Finder$" manage=off
 yabai -m rule --add app="^AppCleaner$" manage=off sticky=on
 yabai -m rule --add app="^Raycast$" manage=off sticky=on
 yabai -m rule --add app="^SF Symbols$" manage=off
 
+# borders
+# borders active_color=0xffe2e2e3 inactive_color=0xff414550 width=5.0 blacklist=kitty &
