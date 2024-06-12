@@ -9,11 +9,6 @@ keymap.set("i", "jk", "<ESC>", { desc = "Exit insert mode with jk" })
 -- Select all
 keymap.set("n", "<C-a>", "gg<S-v>G")
 
--- Tabs
--- keymap.set("n", "te", ":tabedit")
--- keymap.set("n", "<tab>", ":tabnext<Return>", opts)
--- keymap.set("n", "<s-tab>", ":tabprev<Return>", opts)
-
 -- Split window
 keymap.set("n", "ss", ":split<Return>", opts)
 keymap.set("n", "sv", ":vsplit<Return>", opts)
