@@ -1,5 +1,6 @@
 README.md
 LICENSE
+apps.md
 
 .config/nvim/lazy-lock.json
 .vscode
