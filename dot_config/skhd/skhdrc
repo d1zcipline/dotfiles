@@ -1,9 +1,12 @@
-#
 shift + alt - r : yabai --restart-service
 
 # focus display
 shift + alt - h : yabai -m display --focus prev || yabai -m display --focus last
 shift + alt - l : yabai -m display --focus next || yabai -m display --focus first
+
+shift + cmd - 1 : yabai -m display --focus 1
+shift + cmd - 2 : yabai -m display --focus 2
+shift + cmd - 3 : yabai -m display --focus 3
 
 # focus window
 alt - h : yabai -m window --focus west
@@ -17,7 +20,7 @@ alt - 2 : yabai -m space --focus 2
 alt - 3 : yabai -m space --focus 3
 alt - 4 : yabai -m space --focus 4
 alt - 5 : yabai -m space --focus 5
-alt - 6 : yabai -m space --focus 5
+alt - 6 : yabai -m space --focus 6
 alt - 7 : yabai -m space --focus 7
 alt - 8 : yabai -m space --focus 8
 alt - 9 : yabai -m space --focus 9
@@ -36,7 +39,6 @@ shift + alt - k : yabai -m space --focus next || yabai -m space --focus first
 # shift + alt + ctrl - j : yabai -m window --warp south
 # shift + alt + ctrl - k : yabai -m window --warp north
 # shift + alt + ctrl - l : yabai -m window --warp east
-
 
 # rotate tree
 alt - r : yabai -m space --rotate 90
