@@ -1,76 +1,56 @@
 return {
   {
-    "nvim-tree/nvim-tree.lua",
-    config = function()
-      vim.g.loaded_netrw = 1
-      vim.g.loaded_netrwPlugin = 1
-      require("nvim-tree").setup({
-        on_attach = function(bufnr)
-          local api = require("nvim-tree.api")
-
-          local function opts(desc)
-            return {
-              desc = "nvim-tree: " .. desc,
-              buffer = bufnr,
-              noremap = true,
-              silent = true,
-              nowait = true,
-            }
-          end
-
-          -- default mappings
-          api.config.mappings.default_on_attach(bufnr)
-
-          -- custom mappings
-          vim.keymap.set("n", "t", api.node.open.tab, opts("Tab"))
-        end,
-        actions = {
-          open_file = {
-            quit_on_open = true,
-          },
-        },
-        sort = {
-          sorter = "case_sensitive",
-        },
-        view = {
-          width = 30,
-        },
-        renderer = {
-          group_empty = true,
-        },
-        filters = {
-          dotfiles = true,
-          custom = {
-            ".DS_Store",
-          },
-        },
-        git = {
-          ignore = false,
-        },
-        log = {
-          enable = true,
-          truncate = true,
-          types = {
-            diagnostics = true,
-            git = true,
-            profile = true,
-            watcher = true,
-          },
-        },
-      })
-      vim.keymap.set("n", "<leader>e", "<cmd>NvimTreeToggle<CR>", { desc = "Toggle file explorer" }) -- toggle file explorer
-
-      if vim.fn.argc(-1) == 0 then
-        vim.cmd("NvimTreeFocus")
-      end
-    end,
-  },
-
-  {
     "kdheepak/lazygit.nvim",
     -- optional for floating window border decoration
     dependencies = {
       "nvim-lua/plenary.nvim",
     },
+  },
+
+  {
+    "nvim-tree/nvim-tree.lua",
+    version = "*",
+    lazy = false,
+    dependencies = {
+      "nvim-tree/nvim-web-devicons",
+    },
+    config = function()
+      local HEIGHT_RATIO = 0.8 -- You can change this
+      local WIDTH_RATIO = 0.5 -- You can change this too
+      require("nvim-tree").setup({
+        disable_netrw = true,
+        hijack_netrw = true,
+        respect_buf_cwd = true,
+        sync_root_with_cwd = true,
+        view = {
+          float = {
+            enable = true,
+            open_win_config = function()
+              local screen_w = vim.opt.columns:get()
+              local screen_h = vim.opt.lines:get() - vim.opt.cmdheight:get()
+              local window_w = screen_w * WIDTH_RATIO
+              local window_h = screen_h * HEIGHT_RATIO
+              local window_w_int = math.floor(window_w)
+              local window_h_int = math.floor(window_h)
+              local center_x = (screen_w - window_w) / 2
+              local center_y = ((vim.opt.lines:get() - window_h) / 2 - vim.opt.cmdheight:get())
+              return {
+                border = "rounded",
+                relative = "editor",
+                row = center_y,
+                col = center_x,
+                width = window_w_int,
+                height = window_h_int,
+              }
+            end,
+          },
+          width = function()
+            return math.floor(vim.opt.columns:get() * WIDTH_RATIO)
+          end,
+        },
+      })
+      -- api.config.mappings.default_on_attach(bufnr)
+      vim.keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>", { desc = "Toggle file explorer" })
+    end,
   },
 }
