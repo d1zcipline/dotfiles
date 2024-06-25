@@ -10,7 +10,7 @@ Apps that I use:
 - IINA
 - Keka
 - kitty
-- Mos
+- LinearMouse
 - noTunes
 - Obsidian
 - Raycast
@@ -22,5 +22,5 @@ Apps that I use:
 You can install this apps with homebrew by running next command line:
 
 ```bash
-brew install --cask cleanshot firefox flux hyperkey iina keka kitty mos notunes obsidian raycast superlist vscodium aldente
+brew install --cask cleanshot firefox flux hyperkey iina keka kitty linearmouse notunes obsidian raycast superlist vscodium aldente
 ```
