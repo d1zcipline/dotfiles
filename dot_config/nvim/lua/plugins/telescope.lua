@@ -5,10 +5,6 @@ return {
     { "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
     "nvim-tree/nvim-web-devicons",
   },
-  keys = {
-    { "<leader>ff", "<cmd>Telescope find_files<cr>", desc = "Fuzzy find files in cwd" },
-    { "<leader>fs", "<cmd>Telescope live_grep<cr>", desc = "Find files in cwd" },
-  },
   opts = {
     pickers = {
       find_files = {
@@ -23,22 +19,21 @@ return {
     telescope.setup({
       defaults = {
         path_display = { "smart" },
-        initial_mode = "normal",
         mappings = {
           i = {
             ["<C-k>"] = actions.move_selection_previous, -- move to prev result
             ["<C-j>"] = actions.move_selection_next, -- move to next result
-          },
-          n = {
+            ["<C-q>"] = actions.close,
             ["<ESC>"] = actions.close,
-            ["j"] = actions.move_selection_next,
-            ["k"] = actions.move_selection_previous,
-            ["q"] = actions.close,
           },
         },
       },
     })
 
     telescope.load_extension("fzf")
+
+    local keymap = vim.keymap
+    keymap.set("n", "<leader>ff", ":Telescope find_files<CR>", { desc = "Fuzzy find files in cwd" })
+    keymap.set("n", "<leader>fs", ":Telescope live_grep<CR>", { desc = "Find files in cwd" })
   end,
 }
