@@ -6,7 +6,6 @@ Apps that I use:
 - CleanShot X
 - Firefox
 - Flux
-- Hyperkey
 - IINA
 - Keka
 - kitty
@@ -14,7 +13,6 @@ Apps that I use:
 - noTunes
 - Obsidian
 - Raycast
-- superlist
 - VSCodium
 
 ## Installation

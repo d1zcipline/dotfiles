@@ -10,7 +10,7 @@ The software that I use:
 
 - bash
 - [Starship](https://starship.rs/)
-- [yabai](https://github.com/koekeishiya/yabai) + [skhd](https://github.com/koekeishiya/skhd)
+- [Aerospace](https://github.com/nikitabobko/AeroSpace?tab=readme-ov-file)
 - Neovim
 - [kitty](https://sw.kovidgoyal.net/kitty/)
 - [yazi](https://yazi-rs.github.io/)
