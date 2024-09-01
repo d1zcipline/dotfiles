@@ -3,6 +3,7 @@ local opts = { noremap = true, silent = true }
 local term_opts = { silent = true }
 
 keymap.set("i", "jk", "<ESC>", { desc = "Exit insert mode with jk" })
+keymap.set("i", "ол", "<ESC>", { desc = "Exit insert mode with jk (Russian)" })
 
 keymap.set("n", "<ESC>", ":nohlsearch<CR>", { desc = "Disable hlsearch highlights" })
 
