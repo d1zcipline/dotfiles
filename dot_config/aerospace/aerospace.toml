@@ -107,10 +107,13 @@ alt-j = 'focus down'
 alt-k = 'focus up'
 alt-l = 'focus right'
 
-ctrl-shift-h = 'workspace --wrap-around prev'
-ctrl-shift-j = 'focus-monitor down'
-ctrl-shift-k = 'focus-monitor up'
-ctrl-shift-l = 'workspace --wrap-around next'
+cmd-shift-h = 'focus-monitor left' 
+cmd-shift-j = 'workspace --wrap-around prev'
+cmd-shift-k = 'workspace --wrap-around next'
+cmd-shift-l = 'focus-monitor right'
+
+cmd-shift-1 = 'focus-monitor 1'
+cmd-shift-2 = 'focus-monitor 2'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#move
 alt-shift-h = 'move left'
@@ -185,3 +188,7 @@ alt-shift-h = ['join-with left', 'mode main']
 alt-shift-j = ['join-with down', 'mode main']
 alt-shift-k = ['join-with up', 'mode main']
 alt-shift-l = ['join-with right', 'mode main']
+
+[[on-window-detected]]
+if.app-id = 'com.apple.finder'
+run = 'layout floating'
