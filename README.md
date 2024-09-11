@@ -8,7 +8,7 @@ I'm using macbook, so everything was written for macOS
 
 The software that I use:
 
-- bash
+- zsh
 - [Starship](https://starship.rs/)
 - [Aerospace](https://github.com/nikitabobko/AeroSpace?tab=readme-ov-file)
 - Neovim

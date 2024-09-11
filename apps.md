@@ -13,12 +13,12 @@ Apps that I use:
 - noTunes
 - Obsidian
 - Raycast
-- VSCodium
+- VS Code
 
-## Installation
+# Installation
 
 You can install this apps with homebrew by running next command line:
 
 ```bash
-brew install --cask cleanshot firefox flux hyperkey iina keka kitty linearmouse notunes obsidian raycast superlist vscodium aldente
+brew install --cask cleanshot firefox flux iina keka kitty linearmouse notunes obsidian raycast visual-studio-code aldente
 ```
