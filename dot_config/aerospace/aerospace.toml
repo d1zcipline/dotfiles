@@ -61,10 +61,12 @@ outer.right =      5
 1 = 'main'
 2 = 'main'
 3 = 'main'
-4 = ['secondary', 'built-in']
-5 = ['secondary', 'built-in']
-6 = ['secondary', 'built-in']
-7 = ['secondary', 'built-in']
+4 = 'main'
+Q = ['secondary', 'built-in']
+W = ['secondary', 'built-in']
+E = ['secondary', 'built-in']
+A = ['secondary', 'built-in']
+S = ['secondary', 'built-in']
 
 # 'main' binding mode declaration
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
@@ -95,7 +97,7 @@ outer.right =      5
 #     activate
 # end tell'
 # '''
-alt-q = 'close-all-windows-but-current'
+# alt-q = 'close-all-windows-but-current'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#layout
 alt-slash = 'layout tiles horizontal vertical'
@@ -131,12 +133,11 @@ ctrl-1 = 'workspace 1'
 ctrl-2 = 'workspace 2'
 ctrl-3 = 'workspace 3'
 ctrl-4 = 'workspace 4'
-ctrl-5 = 'workspace 5'
-ctrl-6 = 'workspace 6'
-ctrl-7 = 'workspace 7'
-ctrl-8 = 'workspace 8'
-ctrl-9 = 'workspace 9'
-ctrl-0 = 'workspace 10'
+ctrl-q = 'workspace Q'
+ctrl-w = 'workspace W'
+ctrl-e = 'workspace E'
+ctrl-a = 'workspace A'
+ctrl-s = 'workspace S'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
 
@@ -144,23 +145,21 @@ alt-1 = 'move-node-to-workspace 1'
 alt-2 = 'move-node-to-workspace 2'
 alt-3 = 'move-node-to-workspace 3'
 alt-4 = 'move-node-to-workspace 4'
-alt-5 = 'move-node-to-workspace 5'
-alt-6 = 'move-node-to-workspace 6'
-alt-7 = 'move-node-to-workspace 7'
-alt-8 = 'move-node-to-workspace 8'
-alt-9 = 'move-node-to-workspace 9'
-alt-0 = 'move-node-to-workspace 10'
+alt-q = 'move-node-to-workspace Q'
+alt-w = 'move-node-to-workspace W'
+alt-e = 'move-node-to-workspace E'
+alt-a = 'move-node-to-workspace A'
+alt-s = 'move-node-to-workspace S'
 
 alt-shift-1 = ['move-node-to-workspace 1', 'workspace 1']
 alt-shift-2 = ['move-node-to-workspace 2', 'workspace 2']
 alt-shift-3 = ['move-node-to-workspace 3', 'workspace 3']
 alt-shift-4 = ['move-node-to-workspace 4', 'workspace 4']
-alt-shift-5 = ['move-node-to-workspace 5', 'workspace 5']
-alt-shift-6 = ['move-node-to-workspace 6', 'workspace 6']
-alt-shift-7 = ['move-node-to-workspace 7', 'workspace 7']
-alt-shift-8 = ['move-node-to-workspace 8', 'workspace 8']
-alt-shift-9 = ['move-node-to-workspace 9', 'workspace 9']
-alt-shift-0 = ['move-node-to-workspace 10', 'workspace 10']
+alt-shift-q = ['move-node-to-workspace Q', 'workspace Q']
+alt-shift-w = ['move-node-to-workspace W', 'workspace W']
+alt-shift-e = ['move-node-to-workspace E', 'workspace E']
+alt-shift-a = ['move-node-to-workspace A', 'workspace A']
+alt-shift-s = ['move-node-to-workspace S', 'workspace S']
 
 alt-shift-f = 'fullscreen'
 alt-f = 'layout floating tiling'
@@ -171,7 +170,9 @@ alt-tab = 'workspace-back-and-forth'
 alt-shift-tab = 'move-workspace-to-monitor --wrap-around next'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#mode
-alt-shift-s = 'mode service'
+alt-shift-semicolon = 'mode service'
+
+cmd-h = [] # Disable "hide application"
 
 # 'service' binding mode declaration.
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
