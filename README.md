@@ -14,6 +14,7 @@ The software that I use:
 - Neovim
 - [kitty](https://sw.kovidgoyal.net/kitty/)
 - [yazi](https://yazi-rs.github.io/)
+- [kanata](https://github.com/jtroo/kanata)
 
 You can see a list of apps that I use [here](/apps.md)
 
