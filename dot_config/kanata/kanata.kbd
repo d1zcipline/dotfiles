@@ -4,7 +4,7 @@
 )
     
 (defalias
-  hypr (multi lsft lctl lmet lalt)
+  hypr (multi lsft lctl lmet lalt (layer-while-held hyper))
 )
 
 (defsrc
@@ -17,9 +17,8 @@
 )
 
 (deflayermap (default)
-  caps (tap-hold-press 50 200 caps @hypr)
-  ;; spc (tap-hold-press 0 300 spc (layer-while-held nav))
   grv (tap-hold 100 200 grv lrld)
+  caps (tap-hold-press 50 200 caps @hypr)
 )
 
 (deflayermap (nav)
@@ -27,5 +26,28 @@
   j down
   k up
   l right
+  q (layer-switch default)
 )
 
+(deflayermap (hyper)
+  o (layer-while-held open)
+  s (layer-while-held system)
+  n (layer-switch nav)
+)
+
+(deflayermap (open)
+  f (cmd open -a Finder)
+  w (cmd open -a WezTerm)
+  b (cmd open -a Firefox)
+  d (cmd open -a Discord)
+  t (cmd open -a Telegram)
+  k (cmd open -a Obsidian)
+)
+
+(deflayermap (system)
+  k (one-shot 1 🔊)
+  j (one-shot 1 🔉)
+  m (one-shot 1 🔇)
+  h (one-shot 1 🔅)
+  l (one-shot 1 🔆)
+)
