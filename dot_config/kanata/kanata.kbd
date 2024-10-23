@@ -52,6 +52,12 @@
   h (one-shot 1 🔅)
   l (one-shot 1 🔆)
 
+  c (cmd open -g raycast://extensions/mooxl/coffee/caffeinateToggle)
+  e (cmd open -g raycast://extensions/raycast/system/sleep)
+  o (cmd open -g raycast://extensions/raycast/system/lock-screen)
+  d (cmd shutdown -h now)
+  r (cmd shutdown -r now)
+
   , (cmd SwitchAudioSource -s "MacBook Air Speakers" -t output)
   . (cmd SwitchAudioSource -s "UGREEN HiTune Max5c" -t output)
   / (cmd SwitchAudioSource -s "Realme Buds Air6 Pro" -t output)
