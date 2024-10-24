@@ -18,7 +18,7 @@
 
 (deflayermap (default)
   grv (tap-hold 100 200 grv lrld)
-  caps (tap-hold-press 50 200 caps @hypr)
+  caps (tap-hold-press 100 200 caps @hypr)
 )
 
 (deflayermap (hyper)
@@ -52,13 +52,17 @@
   h (one-shot 1 🔅)
   l (one-shot 1 🔆)
 
+  ;; raycast
   c (cmd open -g raycast://extensions/mooxl/coffee/caffeinateToggle)
   e (cmd open -g raycast://extensions/raycast/system/sleep)
   o (cmd open -g raycast://extensions/raycast/system/lock-screen)
-  d (cmd shutdown -h now)
-  r (cmd shutdown -r now)
+  d (cmd open -g raycast://extensions/raycast/system/shut-down)
+  r (cmd open -g raycast://extensions/raycast/system/restart)
 
+  n (cmd open -g raycast://extensions/Quentin23Soleil/mute-microphone/toggle-mute)
+
+  ;; SwitchAudioSource
   , (cmd SwitchAudioSource -s "MacBook Air Speakers" -t output)
   . (cmd SwitchAudioSource -s "UGREEN HiTune Max5c" -t output)
-  / (cmd SwitchAudioSource -s "Realme Buds Air6 Pro" -t output)
+  / (cmd SwitchAudioSource -s "realme Buds Air6 Pro" -t output)
 )
