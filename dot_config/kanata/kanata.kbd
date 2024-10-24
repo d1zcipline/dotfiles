@@ -62,7 +62,7 @@
   n (cmd open -g raycast://extensions/Quentin23Soleil/mute-microphone/toggle-mute)
 
   ;; SwitchAudioSource
-  , (cmd SwitchAudioSource -s "MacBook Air Speakers" -t output)
-  . (cmd SwitchAudioSource -s "UGREEN HiTune Max5c" -t output)
-  / (cmd SwitchAudioSource -s "realme Buds Air6 Pro" -t output)
+  , (cmd zsh ./.config/kanata/scripts/switchaudiodefault.sh)
+  . (cmd zsh ./.config/kanata/scripts/switchaudiougreen.sh)
+  / (cmd zsh ./.config/kanata/scripts/switchaudiorealme.sh)
 )
