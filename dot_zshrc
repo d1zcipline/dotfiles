@@ -81,10 +81,6 @@ alias v="vim"
 # Second brain
 alias sb="nvim ~/obsidian/Knowledge\ Vault"
 
-# Spoof-dpi
-alias sp="spoofdpi -dns-addr 1.1.1.1 -enable-doh"
-alias spoof="spoofdpi"
-
 # Golang
 alias golang="cd go/src"
 

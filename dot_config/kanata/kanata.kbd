@@ -2,9 +2,13 @@
   process-unmapped-keys yes
   danger-enable-cmd yes
 )
-    
+
 (defalias
   hypr (multi lsft lctl lmet lalt (layer-while-held hyper))
+)
+
+(deflocalkeys-macos
+  macos-fn 464
 )
 
 (defsrc
@@ -18,7 +22,8 @@
 
 (deflayermap (default)
   grv (tap-hold 100 200 grv lrld)
-  caps (tap-hold-press 100 200 caps @hypr)
+  caps (tap-hold 100 150 caps @hypr)
+  macos-fn lctl
 )
 
 (deflayermap (hyper)
@@ -36,21 +41,28 @@
 )
 
 (deflayermap (open)
+  c (cmd open Documents/Cleanshots/)
+  m (cmd open misc/Math)
+  n (cmd open Downloads)
+  u (cmd open usession/3_semester)
   f (cmd open -a Finder)
-  w (cmd open -a WezTerm)
-  b (cmd open -a Firefox)
-  d (cmd open -a Discord)
-  t (cmd open -a Telegram)
-  k (cmd open -a Obsidian)
-  s (cmd open -a "System Settings")
+  e (cmd open -a "/Applications/Microsoft Excel.app")
+  w (cmd open -a "/Applications/WezTerm.app")
+  b (cmd open -a "/Applications/Zen Browser.app")
+  d (cmd open -a "/Applications/Discord.app")
+  t (cmd open -a "/Applications/Telegram.app")
+  p (cmd open -a "/Applications/Parallels Desktop.app")
+  k (cmd open -a "/Applications/Obsidian.app")
+  s (cmd open -a "/Applications/System Settings.app")
+  a (cmd open -a "/Applications/DaVinci Resolve.app")
 )
 
 (deflayermap (system)
-  k (one-shot 1 🔊)
-  j (one-shot 1 🔉)
-  m (one-shot 1 🔇)
-  h (one-shot 1 🔅)
-  l (one-shot 1 🔆)
+  k (unmod volu)
+  j (unmod vold)
+  m mute
+  h (unmod brdn)
+  l (unmod brup)
 
   ;; raycast
   c (cmd open -g raycast://extensions/mooxl/coffee/caffeinateToggle)
@@ -62,7 +74,7 @@
   n (cmd open -g raycast://extensions/Quentin23Soleil/mute-microphone/toggle-mute)
 
   ;; SwitchAudioSource
-  , (cmd zsh ./.config/kanata/scripts/switchaudiodefault.sh)
   . (cmd zsh ./.config/kanata/scripts/switchaudiougreen.sh)
+  , (cmd zsh ./.config/kanata/scripts/switchaudiodefault.sh)
   / (cmd zsh ./.config/kanata/scripts/switchaudiorealme.sh)
 )

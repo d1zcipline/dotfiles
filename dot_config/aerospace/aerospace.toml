@@ -12,7 +12,7 @@ after-login-command = []
 after-startup-command = []
 
 # Start AeroSpace at login
-start-at-login = true
+start-at-login = false
 
 # Normalizations. See: https://nikitabobko.github.io/AeroSpace/guide#normalization
 enable-normalization-flatten-containers = true
@@ -62,6 +62,8 @@ outer.right =      5
 2 = 'main'
 3 = 'main'
 4 = 'main'
+5 = 'main'
+6 = 'main'
 Q = ['secondary', 'built-in']
 W = ['secondary', 'built-in']
 E = ['secondary', 'built-in']
@@ -103,22 +105,23 @@ S = ['secondary', 'built-in']
 alt-slash = 'layout tiles horizontal vertical'
 alt-comma = 'layout accordion horizontal vertical'
 
-# See: https://nikitabobko.github.io/AeroSpace/commands#focus
-alt-h = 'focus left'
-alt-j = 'focus down'
-alt-k = 'focus up'
-alt-l = 'focus right'
 
 cmd-shift-h = 'focus-monitor left' 
 cmd-shift-j = 'focus-monitor down'
 cmd-shift-k = 'focus-monitor up'
 cmd-shift-l = 'focus-monitor right'
 
+# See: https://nikitabobko.github.io/AeroSpace/commands#focus
+alt-shift-h = 'focus left'
+alt-shift-j = 'focus down'
+alt-shift-k = 'focus up'
+alt-shift-l = 'focus right'
+
 # See: https://nikitabobko.github.io/AeroSpace/commands#move
-alt-shift-h = 'move left'
-alt-shift-j = 'move down'
-alt-shift-k = 'move up'
-alt-shift-l = 'move right'
+alt-h = 'move left'
+alt-j = 'move down'
+alt-k = 'move up'
+alt-l = 'move right'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#resize
 alt-shift-backspace = 'balance-sizes'
@@ -130,6 +133,8 @@ ctrl-1 = 'workspace 1'
 ctrl-2 = 'workspace 2'
 ctrl-3 = 'workspace 3'
 ctrl-4 = 'workspace 4'
+ctrl-5 = 'workspace 5'
+ctrl-6 = 'workspace 6'
 ctrl-q = 'workspace Q'
 ctrl-w = 'workspace W'
 ctrl-e = 'workspace E'
@@ -142,6 +147,8 @@ alt-1 = 'move-node-to-workspace 1'
 alt-2 = 'move-node-to-workspace 2'
 alt-3 = 'move-node-to-workspace 3'
 alt-4 = 'move-node-to-workspace 4'
+alt-5 = 'move-node-to-workspace 5'
+alt-6 = 'move-node-to-workspace 6'
 alt-q = 'move-node-to-workspace Q'
 alt-w = 'move-node-to-workspace W'
 alt-e = 'move-node-to-workspace E'
@@ -152,6 +159,8 @@ alt-shift-1 = 'move-node-to-workspace --focus-follows-window 1'
 alt-shift-2 = 'move-node-to-workspace --focus-follows-window 2'
 alt-shift-3 = 'move-node-to-workspace --focus-follows-window 3'
 alt-shift-4 = 'move-node-to-workspace --focus-follows-window 4'
+alt-shift-5 = 'move-node-to-workspace --focus-follows-window 5'
+alt-shift-6 = 'move-node-to-workspace --focus-follows-window 6'
 alt-shift-q = 'move-node-to-workspace --focus-follows-window Q'
 alt-shift-w = 'move-node-to-workspace --focus-follows-window W'
 alt-shift-e = 'move-node-to-workspace --focus-follows-window E'
@@ -194,4 +203,8 @@ run = 'layout floating'
 
 [[on-window-detected]]
 if.app-id = 'com.amnezia.AmneziaVPN'
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-id = 'e.AmneziaVPN'
 run = 'layout floating'
