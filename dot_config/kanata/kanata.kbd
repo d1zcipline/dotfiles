@@ -4,7 +4,8 @@
 )
 
 (defalias
-  hypr (multi lsft lctl lmet lalt (layer-while-held hyper))
+  hypr (multi lctl lmet lalt (layer-while-held hyper))
+  tmux (multi lctl spc)
 )
 
 (deflocalkeys-macos
@@ -22,47 +23,48 @@
 
 (deflayermap (default)
   grv (tap-hold 100 200 grv lrld)
-  caps (tap-hold 100 150 caps @hypr)
+  caps (tap-hold 100 150 macos-fn (layer-while-held hyper))
   macos-fn lctl
 )
 
 (deflayermap (hyper)
   o (layer-while-held open)
   s (layer-while-held system)
+  ;; f (layer-while-held finder)
 
   ;; tmux prefix shortcut
-  f (macro (unmod lctl spc))
+  ;; t (multi lctl spc)
+
+  ;; Trying to mix it
+  f (tap-hold 100 200 @tmux (layer-while-held finder))
 
   ;; Arrows navigation
-  h (unmod left)
-  j (unmod down)
-  k (unmod up)
-  l (unmod right)
+  h left
+  j down
+  k up
+  l right
 )
 
 (deflayermap (open)
-  c (cmd open Documents/Cleanshots/)
-  m (cmd open misc/Math)
-  n (cmd open Downloads)
-  u (cmd open usession/3_semester)
   f (cmd open -a Finder)
   e (cmd open -a "/Applications/Microsoft Excel.app")
   w (cmd open -a "/Applications/WezTerm.app")
-  b (cmd open -a "/Applications/Zen Browser.app")
+  b (cmd open -a "/Applications/Firefox Nightly.app/")
   d (cmd open -a "/Applications/Discord.app")
   t (cmd open -a "/Applications/Telegram.app")
   p (cmd open -a "/Applications/Parallels Desktop.app")
   k (cmd open -a "/Applications/Obsidian.app")
   s (cmd open -a "/Applications/System Settings.app")
   a (cmd open -a "/Applications/DaVinci Resolve.app")
+  v (cmd open -a "/Applications/AmneziaVPN.app/")
 )
 
 (deflayermap (system)
-  k (unmod volu)
-  j (unmod vold)
+  k volu
+  j vold
   m mute
-  h (unmod brdn)
-  l (unmod brup)
+  h brdn
+  l brup
 
   ;; raycast
   c (cmd open -g raycast://extensions/mooxl/coffee/caffeinateToggle)
@@ -77,4 +79,13 @@
   . (cmd zsh ./.config/kanata/scripts/switchaudiougreen.sh)
   , (cmd zsh ./.config/kanata/scripts/switchaudiodefault.sh)
   / (cmd zsh ./.config/kanata/scripts/switchaudiorealme.sh)
+)
+
+(deflayermap (finder)
+  a (cmd open /Applications/)
+  c (cmd open Documents/Cleanshots/)
+  m (cmd open misc/Math)
+  n (cmd open Downloads)
+  d (cmd open Documents)
+  u (cmd open usession/3_semester)
 )
