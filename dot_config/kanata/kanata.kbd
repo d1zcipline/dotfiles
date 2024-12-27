@@ -23,13 +23,14 @@
 
 (deflayermap (default)
   grv (tap-hold 100 200 grv lrld)
-  caps (tap-hold 100 150 macos-fn (layer-while-held hyper))
+  caps (tap-hold 100 150 caps (layer-while-held hyper))
   macos-fn lctl
 )
 
 (deflayermap (hyper)
   o (layer-while-held open)
   s (layer-while-held system)
+  v (layer-while-held volume)
   ;; f (layer-while-held finder)
 
   ;; tmux prefix shortcut
@@ -49,10 +50,10 @@
   f (cmd open -a Finder)
   e (cmd open -a "/Applications/Microsoft Excel.app")
   w (cmd open -a "/Applications/WezTerm.app")
-  b (cmd open -a "/Applications/Firefox Nightly.app/")
+  b (cmd open -a "/Applications/Zen Browser.app/")
   d (cmd open -a "/Applications/Discord.app")
   t (cmd open -a "/Applications/Telegram.app")
-  p (cmd open -a "/Applications/Parallels Desktop.app")
+  ;; p (cmd open -a "/Applications/Parallels Desktop.app")
   k (cmd open -a "/Applications/Obsidian.app")
   s (cmd open -a "/Applications/System Settings.app")
   a (cmd open -a "/Applications/DaVinci Resolve.app")
@@ -60,25 +61,28 @@
 )
 
 (deflayermap (system)
-  k volu
-  j vold
-  m mute
-  h brdn
-  l brup
+  j brdn
+  k brup
 
   ;; raycast
   c (cmd open -g raycast://extensions/mooxl/coffee/caffeinateToggle)
   e (cmd open -g raycast://extensions/raycast/system/sleep)
-  o (cmd open -g raycast://extensions/raycast/system/lock-screen)
+  l (cmd open -g raycast://extensions/raycast/system/lock-screen)
   d (cmd open -g raycast://extensions/raycast/system/shut-down)
   r (cmd open -g raycast://extensions/raycast/system/restart)
+)
 
-  n (cmd open -g raycast://extensions/Quentin23Soleil/mute-microphone/toggle-mute)
+(deflayermap (volume)
+  k volu
+  j vold
+  m mute
+  i (cmd open -g raycast://extensions/Quentin23Soleil/mute-microphone/toggle-mute)
 
-  ;; SwitchAudioSource
+  ;; audiosource
   . (cmd zsh ./.config/kanata/scripts/switchaudiougreen.sh)
   , (cmd zsh ./.config/kanata/scripts/switchaudiodefault.sh)
   / (cmd zsh ./.config/kanata/scripts/switchaudiorealme.sh)
+  ; (cmd zsh ./.config/kanata/script/switchaudiousb.sh)
 )
 
 (deflayermap (finder)
