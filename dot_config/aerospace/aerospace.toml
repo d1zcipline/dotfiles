@@ -12,7 +12,7 @@ after-login-command = []
 after-startup-command = []
 
 # Start AeroSpace at login
-start-at-login = false
+start-at-login = true
 
 # Normalizations. See: https://nikitabobko.github.io/AeroSpace/guide#normalization
 enable-normalization-flatten-containers = true
@@ -21,7 +21,7 @@ enable-normalization-opposite-orientation-for-nested-containers = true
 # See: https://nikitabobko.github.io/AeroSpace/guide#layouts
 # The 'accordion-padding' specifies the size of accordion padding
 # You can set 0 to disable the padding feature
-accordion-padding = 30
+accordion-padding = 10
 
 # Possible values: tiles|accordion
 default-root-container-layout = 'tiles'
@@ -63,12 +63,11 @@ outer.right =      5
 3 = 'main'
 4 = 'main'
 5 = 'main'
-6 = 'main'
-Q = ['secondary', 'built-in']
-W = ['secondary', 'built-in']
-E = ['secondary', 'built-in']
-A = ['secondary', 'built-in']
-S = ['secondary', 'built-in']
+6 = ['secondary', 'built-in']
+7 = ['secondary', 'built-in']
+8 = ['secondary', 'built-in']
+9 = ['secondary', 'built-in']
+10 = ['secondary', 'built-in']
 
 # 'main' binding mode declaration
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
@@ -105,23 +104,22 @@ S = ['secondary', 'built-in']
 alt-slash = 'layout tiles horizontal vertical'
 alt-comma = 'layout accordion horizontal vertical'
 
-
-cmd-shift-h = 'focus-monitor left' 
-cmd-shift-j = 'focus-monitor down'
-cmd-shift-k = 'focus-monitor up'
-cmd-shift-l = 'focus-monitor right'
+cmd-h = 'focus-monitor left' 
+cmd-j = 'workspace --wrap-around prev'
+cmd-k = 'workspace --wrap-around next'
+cmd-l = 'focus-monitor right'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#focus
-alt-shift-h = 'focus left'
-alt-shift-j = 'focus down'
-alt-shift-k = 'focus up'
-alt-shift-l = 'focus right'
+alt-h = 'focus left'
+alt-j = 'focus down'
+alt-k = 'focus up'
+alt-l = 'focus right'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#move
-alt-h = 'move left'
-alt-j = 'move down'
-alt-k = 'move up'
-alt-l = 'move right'
+alt-shift-h = 'move left'
+alt-shift-j = 'move down'
+alt-shift-k = 'move up'
+alt-shift-l = 'move right'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#resize
 alt-shift-backspace = 'balance-sizes'
@@ -134,12 +132,11 @@ ctrl-2 = 'workspace 2'
 ctrl-3 = 'workspace 3'
 ctrl-4 = 'workspace 4'
 ctrl-5 = 'workspace 5'
-ctrl-6 = 'workspace 6'
-ctrl-q = 'workspace Q'
-ctrl-w = 'workspace W'
-ctrl-e = 'workspace E'
-ctrl-a = 'workspace A'
-ctrl-s = 'workspace S'
+ctrl-q = 'workspace 6'
+ctrl-w = 'workspace 7'
+ctrl-e = 'workspace 8'
+ctrl-a = 'workspace 9'
+ctrl-s = 'workspace 10'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
 
@@ -148,37 +145,33 @@ alt-2 = 'move-node-to-workspace 2'
 alt-3 = 'move-node-to-workspace 3'
 alt-4 = 'move-node-to-workspace 4'
 alt-5 = 'move-node-to-workspace 5'
-alt-6 = 'move-node-to-workspace 6'
-alt-q = 'move-node-to-workspace Q'
-alt-w = 'move-node-to-workspace W'
-alt-e = 'move-node-to-workspace E'
-alt-a = 'move-node-to-workspace A'
-alt-s = 'move-node-to-workspace S'
+alt-q = 'move-node-to-workspace 6'
+alt-w = 'move-node-to-workspace 7'
+alt-e = 'move-node-to-workspace 8'
+alt-a = 'move-node-to-workspace 9'
+alt-s = 'move-node-to-workspace 10'
 
 alt-shift-1 = 'move-node-to-workspace --focus-follows-window 1'
 alt-shift-2 = 'move-node-to-workspace --focus-follows-window 2'
 alt-shift-3 = 'move-node-to-workspace --focus-follows-window 3'
 alt-shift-4 = 'move-node-to-workspace --focus-follows-window 4'
 alt-shift-5 = 'move-node-to-workspace --focus-follows-window 5'
-alt-shift-6 = 'move-node-to-workspace --focus-follows-window 6'
-alt-shift-q = 'move-node-to-workspace --focus-follows-window Q'
-alt-shift-w = 'move-node-to-workspace --focus-follows-window W'
-alt-shift-e = 'move-node-to-workspace --focus-follows-window E'
-alt-shift-a = 'move-node-to-workspace --focus-follows-window A'
-alt-shift-s = 'move-node-to-workspace --focus-follows-window S'
+alt-shift-q = 'move-node-to-workspace --focus-follows-window 6'
+alt-shift-w = 'move-node-to-workspace --focus-follows-window 7'
+alt-shift-e = 'move-node-to-workspace --focus-follows-window 8'
+alt-shift-a = 'move-node-to-workspace --focus-follows-window 9'
+alt-shift-s = 'move-node-to-workspace --focus-follows-window 10'
 
 alt-shift-f = 'fullscreen'
 alt-f = 'layout floating tiling'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#workspace-back-and-forth
 alt-tab = 'workspace-back-and-forth'
-# See: https://nikitabobko.github.io/AeroSpace/commands#move-workspace-to-monitor
-alt-shift-tab = 'move-workspace-to-monitor --wrap-around next'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#mode
 alt-shift-semicolon = 'mode service'
 
-cmd-h = [] # Disable "hide application"
+# cmd-h = [] # Disable "hide application"
 cmd-alt-h = [] # Disable "hide others"
 
 # 'service' binding mode declaration.

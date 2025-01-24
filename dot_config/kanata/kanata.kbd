@@ -79,10 +79,12 @@
   i (cmd open -g raycast://extensions/Quentin23Soleil/mute-microphone/toggle-mute)
 
   ;; audiosource
-  . (cmd zsh ./.config/kanata/scripts/switchaudiougreen.sh)
-  , (cmd zsh ./.config/kanata/scripts/switchaudiodefault.sh)
-  / (cmd zsh ./.config/kanata/scripts/switchaudiorealme.sh)
-  ; (cmd zsh ./.config/kanata/script/switchaudiousb.sh)
+  , (cmd zsh ./.config/kanata/script/outputdefault.sh)
+  . (cmd zsh ./.config/kanata/script/outputrealme.sh)
+  / (cmd zsh ./.config/kanata/script/outputugreen.sh)
+
+  ; (cmd zsh ./.config/kanata/script/inputdefault.sh)
+  ' (cmd zsh ./.config/kanata/script/inputfifine.sh)
 )
 
 (deflayermap (finder)
