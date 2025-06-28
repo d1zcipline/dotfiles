@@ -65,11 +65,11 @@ alt - a : yabai -m window --space 8
 alt - s : yabai -m window --space 9
 
 # create/destroy space
-shift + alt - return : yabai -m space --create && \
-                  index="$(yabai -m query --displays --display | jq '.spaces[-1]')" && \
-                  yabai -m space --focus "${index}"
-shift + alt - c : yabai -m space --create
-shift + alt - backspace : yabai -m space --destroy; yabai -m space --focus recent
+# shift + alt - return : yabai -m space --create && \
+#                   index="$(yabai -m query --displays --display | jq '.spaces[-1]')" && \
+#                   yabai -m space --focus "${index}"
+# shift + alt - c : yabai -m space --create
+# shift + alt - backspace : yabai -m space --destroy; yabai -m space --focus recent
 
 
 # move managed window
@@ -88,8 +88,6 @@ alt - y : yabai -m space --mirror y-axis
 alt - x : yabai -m space --mirror x-axis
 
 # toggle window fullscreen zoom
-# Doesn't work?
-alt - f : yabai -m window --toggle zoom-fullscreen
 
 # alt - s : yabai -m window --toggle
 shift + alt - t : yabai -m window --toggle sticky;\
@@ -100,7 +98,7 @@ shift + alt - t : yabai -m window --toggle sticky;\
 alt - g : yabai -m space --toggle padding; yabai -m space --toggle gap
 
 # float / unfloat window and center on screen
-alt - t : yabai -m window --toggle float;\
+alt - f : yabai -m window --toggle float;\
       	yabai -m window --grid 4:4:1:1:2:2
 
 # toggle window split type

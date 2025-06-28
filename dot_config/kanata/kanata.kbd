@@ -31,12 +31,8 @@
   o (layer-while-held open)
   s (layer-while-held system)
   v (layer-while-held volume)
-  ;; f (layer-while-held finder)
 
-  ;; tmux prefix shortcut
-  ;; t (multi lctl spc)
-
-  ;; Trying to mix it
+  ;; Tmux prefix + finder shortuct
   f (tap-hold 100 200 @tmux (layer-while-held finder))
 
   ;; Arrows navigation
@@ -81,17 +77,17 @@
   ;; audiosource
   , (cmd zsh ./.config/kanata/script/outputdefault.sh)
   . (cmd zsh ./.config/kanata/script/outputrealme.sh)
-  / (cmd zsh ./.config/kanata/script/outputugreen.sh)
+  / (cmd zsh ./.config/kanata/script/switchugreen.sh)
 
   ; (cmd zsh ./.config/kanata/script/inputdefault.sh)
-  ' (cmd zsh ./.config/kanata/script/inputfifine.sh)
+  ' (cmd zsh ./.config/kanata/script/switchaudiousb.sh)
 )
 
 (deflayermap (finder)
   a (cmd open /Applications/)
   c (cmd open Documents/Cleanshots/)
-  m (cmd open misc/Math)
   n (cmd open Downloads)
   d (cmd open Documents)
-  u (cmd open usession/3_semester)
+  u (cmd open usession/5_semester)
+  o (cmd open Movies/obs)
 )

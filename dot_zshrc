@@ -64,7 +64,7 @@ eval "$(starship init zsh)"
 # cd
 alias ..="cd .."
 alias ...="cd ../.."
-alias uni="cd ~/usession/3_semester/"
+alias uni="cd ~/usession/4_semester/"
 
 # ls
 alias ls="ls --color=auto"
@@ -84,4 +84,5 @@ alias sb="nvim ~/obsidian/Knowledge\ Vault"
 # Golang
 alias golang="cd go/src"
 
-alias kanata="sudo ./.config/kanata/kanata_macos_cmd_allowed_arm64 --cfg ~/.config/kanata/kanata.kbd"
+alias kanatano="sudo ./.config/kanata/kanata_macos_cmd_allowed_arm64 --cfg ~/.config/kanata/kanata.kbd"
+export PATH="/opt/homebrew/opt/curl/bin:$PATH"
