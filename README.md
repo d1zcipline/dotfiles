@@ -12,7 +12,7 @@ The software that I use:
 - [Starship](https://starship.rs/)
 - [Aerospace](https://github.com/nikitabobko/AeroSpace?tab=readme-ov-file)
 - Neovim
-- [kitty](https://sw.kovidgoyal.net/kitty/)
+- [ghostty](https://ghostty.org/)
 - [yazi](https://yazi-rs.github.io/)
 - [kanata](https://github.com/jtroo/kanata)
 
