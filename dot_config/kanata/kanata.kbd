@@ -3,13 +3,17 @@
   danger-enable-cmd yes
 )
 
-(defalias
-  hypr (multi lctl lmet lalt (layer-while-held hyper))
-  tmux (multi lctl spc)
+(defvar
+  ;; The key must be pressed twice in 200ms to enable repetitions.
+  tap_timeout 200
+  ;; The key must be held 200ms to become a layer shift.
+  hold_timeout 200
+  ;; Slightly higher value for typing keys, to prevent unexpected hold effect.
+  long_hold_timeout 300
 )
 
 (deflocalkeys-macos
-  macos-fn 464
+ macos-fn 464
 )
 
 (defsrc
@@ -18,13 +22,28 @@
   tab  q    w    e    r    t    y    u    i    o    p    [    ]   \
   caps a    s    d    f    g    h    j    k    l    ;    '    ret
   lsft z    x    c    v    b    n    m    ,    .    /    rsft
-  lctl fn lmet lalt         spc          ralt rmet cmp  rctl
+  lctl fn lalt lmet         spc          rmet ralt cmp  rctl
+)
+
+(defalias
+  hypr (multi lctl lmet lalt (layer-while-held hyper))
+  tmux (multi lctl spc)
 )
 
 (deflayermap (default)
   grv (tap-hold 100 200 grv lrld)
   caps (tap-hold 100 150 caps (layer-while-held hyper))
   macos-fn lctl
+
+  ;; Home row
+  rmet bspc
+  s (tap-hold $tap_timeout $long_hold_timeout s lsft)
+  d (tap-hold $tap_timeout $long_hold_timeout d lalt)
+  f (tap-hold $tap_timeout $long_hold_timeout f lctl)
+  j (tap-hold $tap_timeout $long_hold_timeout j rctl)
+  k (tap-hold $tap_timeout $long_hold_timeout k ralt)
+  l (tap-hold $tap_timeout $long_hold_timeout l rsft)
+  ; (tap-hold $tap_timeout $long_hold_timeout ; rmet)
 )
 
 (deflayermap (hyper)
@@ -46,7 +65,7 @@
   f (cmd open -a Finder)
   e (cmd open -a "/Applications/Microsoft Excel.app")
   t (cmd open -a "/Applications/Ghostty.app/")
-  b (cmd open -a "/Applications/Zen Browser.app/")
+  b (cmd open -a "/Applications/Firefox.app/")
   d (cmd open -a "/Applications/Discord.app")
   m (cmd open -a "/Applications/Telegram.app")
   ;; p (cmd open -a "/Applications/Parallels Desktop.app")
