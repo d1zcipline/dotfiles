@@ -12,10 +12,6 @@
   long_hold_timeout 300
 )
 
-(deflocalkeys-macos
- macos-fn 464
-)
-
 (defsrc
   esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12
   grv  1    2    3    4    5    6    7    8    9    0    -    =   bspc
@@ -30,15 +26,17 @@
   tmux (multi lctl spc)
 )
 
-(deflayermap (default)
+(deflayermap (main)
   grv (tap-hold 100 200 grv lrld)
   caps (tap-hold 100 150 caps (layer-while-held hyper))
-  macos-fn lctl
+  rmet bspc
+
+  lctl (layer-while-held fnl) ;; Original left control
+  macos-fn lctl ;; fn (globe) key remapped to left control
 
   ;; Home row
-  rmet bspc
-  s (tap-hold $tap_timeout $long_hold_timeout s lsft)
-  d (tap-hold $tap_timeout $long_hold_timeout d lalt)
+  ;; s (tap-hold $tap_timeout $long_hold_timeout s lsft)
+  ;; d (tap-hold $tap_timeout $long_hold_timeout d lalt)
   f (tap-hold $tap_timeout $long_hold_timeout f lctl)
   j (tap-hold $tap_timeout $long_hold_timeout j rctl)
   k (tap-hold $tap_timeout $long_hold_timeout k ralt)
@@ -50,6 +48,9 @@
   o (layer-while-held open)
   s (layer-while-held system)
   v (layer-while-held volume)
+
+  ;; just a shortcut
+  q esc
 
   ;; Tmux prefix + finder shortuct
   f (tap-hold 100 200 @tmux (layer-while-held finder))
@@ -90,23 +91,39 @@
 (deflayermap (volume)
   k volu
   j vold
+  p pp
+  l prev
+  h next
   m mute
-  i (cmd open -g raycast://extensions/Quentin23Soleil/mute-microphone/toggle-mute)
+  n (cmd open -g raycast://extensions/Quentin23Soleil/mute-microphone/toggle-mute)
 
   ;; audiosource
-  , (cmd zsh ./.config/kanata/script/outputdefault.sh)
-  . (cmd zsh ./.config/kanata/script/outputrealme.sh)
-  / (cmd zsh ./.config/kanata/script/switchugreen.sh)
+  ;; , (cmd zsh ./.config/kanata/script/outputdefault.sh)
+  ;; . (cmd zsh ./.config/kanata/script/outputrealme.sh)
+  ;; / (cmd zsh ./.config/kanata/script/switchugreen.sh)
 
-  ; (cmd zsh ./.config/kanata/script/inputdefault.sh)
-  ' (cmd zsh ./.config/kanata/script/switchaudiousb.sh)
+  ;; ; (cmd zsh ./.config/kanata/script/inputdefault.sh)
+
+  o (cmd open -g raycast://extensions/benvp/audio-device/set-output-device)
+  i (cmd open -g raycast://extensions/benvp/audio-device/set-input-device)
 )
 
 (deflayermap (finder)
   a (cmd open /Applications/)
-  c (cmd open Documents/Cleanshots/)
-  n (cmd open Downloads)
-  d (cmd open Documents)
-  u (cmd open usession/5_semester)
-  o (cmd open Movies/obs)
+  c (cmd open /Users/wld/Documents/Cleanshots/)
+  n (cmd open /Users/wld/Downloads)
+  d (cmd open /Users/wld/Documents)
+  u (cmd open /Users/wld/usession/5_semester)
+  o (cmd open /Users/wld/Movies/obs)
+)
+
+(deflayermap (fnl)
+  f1 brdn
+  f2 brup
+  f7 prev 
+  f8 pp 
+  f9 next
+  f10 mute
+  f11 vold
+  f12 volu
 )
