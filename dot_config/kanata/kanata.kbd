@@ -21,6 +21,10 @@
   lctl fn lalt lmet         spc          rmet ralt cmp  rctl
 )
 
+(deflocalkeys-macos
+  macos-fn 464
+)
+
 (defalias
   hypr (multi lctl lmet lalt (layer-while-held hyper))
   tmux (multi lctl spc)
@@ -31,8 +35,8 @@
   caps (tap-hold 100 150 caps (layer-while-held hyper))
   rmet bspc
 
-  lctl (layer-while-held fnl) ;; Original left control
   macos-fn lctl ;; fn (globe) key remapped to left control
+  lctl (layer-while-held fnl) ;; Original left control
 
   ;; Home row
   ;; s (tap-hold $tap_timeout $long_hold_timeout s lsft)
