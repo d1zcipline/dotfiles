@@ -82,7 +82,14 @@ outer.right =      5
 
 # All possible commands: https://nikitabobko.github.io/AeroSpace/commands
 
-# alt-q = 'close-all-windows-but-current'
+alt-enter = 'exec-and-forget open -n /System/Volumes/Data/Applications/kitty.app'
+alt-t = 'exec-and-forget open -a /System/Volumes/Data/Applications/AyuGram.app'
+alt-d = 'exec-and-forget open -a /System/Volumes/Data/Applications/equibop.app'
+alt-e = 'exec-and-forget open -a finder.app'
+alt-v = 'exec-and-forget open -a /System/Volumes/Data/Applications/Hiddify.app'
+alt-b = 'exec-and-forget open -a /System/Volumes/Data/Applications/Zen.app'
+
+alt-q = 'close-all-windows-but-current'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#layout
 alt-slash= 'layout tiles horizontal'
@@ -132,6 +139,7 @@ alt-5 = 'move-node-to-workspace 5'
 
 alt-shift-1 = 'move-node-to-workspace --focus-follows-window 1'
 alt-shift-2 = 'move-node-to-workspace --focus-follows-window 2'
+alt-shift-3 = 'move-node-to-workspace --focus-follows-window 3'
 alt-shift-4 = 'move-node-to-workspace --focus-follows-window 4'
 alt-shift-5 = 'move-node-to-workspace --focus-follows-window 5'
 
