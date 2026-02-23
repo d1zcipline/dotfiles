@@ -87,7 +87,6 @@ alt-t = 'exec-and-forget open -a /System/Volumes/Data/Applications/AyuGram.app'
 alt-d = 'exec-and-forget open -a /System/Volumes/Data/Applications/equibop.app'
 alt-e = 'exec-and-forget open -a finder.app'
 alt-v = 'exec-and-forget open -a /System/Volumes/Data/Applications/Hiddify.app'
-alt-b = 'exec-and-forget open -a /System/Volumes/Data/Applications/Zen.app'
 
 alt-q = 'close-all-windows-but-current'
 
