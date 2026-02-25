@@ -1,7 +1,7 @@
 # CLI tools 
 eval "$(thefuck --alias)"
-
 eval "$(fzf --zsh)"
+# eval "$(/usr/libexec/path_helper)"
 
 # -- Use fd instead of fzf --
 
@@ -11,9 +11,9 @@ export FZF_ALT_C_COMMAND="fd --type=d --hidden --strip-cwd-prefix --exclude .git
 
 # --- tmux start up ---
 
-if command -v tmux &>/dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
-	tmux a || tmux && exit
-fi
+# if command -v tmux &>/dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
+# 	tmux a || tmux && exit
+# fi
 
 # --- nvm ---
 
@@ -32,8 +32,6 @@ function yy() {
 	rm -f -- "$tmp"
 }
 
-# --- Conda ---
-
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/opt/homebrew/Caskroom/miniconda/base/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
@@ -49,12 +47,6 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
-# conda init "$(basename "${SHELL}")"
-
-# --- Spoof ---
-
-export PATH=$PATH:~/.spoofdpi/bin
-
 # --- Starship prompt ---
 
 eval "$(starship init zsh)"
@@ -64,7 +56,7 @@ eval "$(starship init zsh)"
 # cd
 alias ..="cd .."
 alias ...="cd ../.."
-alias uni="cd ~/usession/4_semester/"
+alias uni="cd ~/usession/5_semester/"
 
 # ls
 alias ls="ls --color=auto"
@@ -72,7 +64,8 @@ alias ll="ls -lh"
 alias la="ls -lah"
 
 # git
-alias gs="git status"
+alias gs="git status --short"
+alias gl='git log --graph --all --pretty=format:"%C(magenta)%h %C(white) %an  %ar%C(auto)  %D%n%s%n"'
 
 # nvim
 alias nv="nvim"
@@ -85,4 +78,12 @@ alias sb="nvim ~/obsidian/Knowledge\ Vault"
 alias golang="cd go/src"
 
 alias kanatano="sudo ./.config/kanata/kanata_macos_cmd_allowed_arm64 --cfg ~/.config/kanata/kanata.kbd"
+
 export PATH="/opt/homebrew/opt/curl/bin:$PATH"
+
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init - zsh)"
+
+# fastfetch
+[[ -o interactive ]] && fastfetch
