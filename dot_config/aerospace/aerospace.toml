@@ -86,7 +86,7 @@ alt-enter = 'exec-and-forget open -n /System/Volumes/Data/Applications/kitty.app
 alt-t = 'exec-and-forget open -a /System/Volumes/Data/Applications/AyuGram.app'
 alt-d = 'exec-and-forget open -a /System/Volumes/Data/Applications/equibop.app'
 alt-e = 'exec-and-forget open -a finder.app'
-alt-v = 'exec-and-forget open -a /System/Volumes/Data/Applications/Hiddify.app'
+alt-v = 'exec-and-forget open -a /System/Volumes/Data/Applications/sudo_Hiddify.app'
 
 alt-q = 'close-all-windows-but-current'
 
